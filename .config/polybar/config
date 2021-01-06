@@ -1,15 +1,20 @@
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-;;
-;;	    ____        __      __              
-;;	   / __ \____  / /_  __/ /_  ____ ______
-;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
-;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
-;;	/_/    \____/_/\__, /_.___/\__,_/_/     
-;;	              /____/                    
-;;
-;; Created By Aditya Shakya @adi1090x
-;; Edited By pingInfo
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
 
 ;; Global WM Settings
 
@@ -22,9 +27,7 @@ margin-top = 0
 ;; File Inclusion
 
 include-file = ~/.config/polybar/colors.ini
-include-file = ~/.config/polybar/modules.ini
-include-file = ~/.config/polybar/user_modules.ini
-include-file = ~/.config/polybar/bars.ini
+include-file = ~/.config/polybar/my_modules.ini
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -41,52 +44,35 @@ width = 100%
 height = 35
 offset-x = 0
 offset-y = 0
-background = ${color.bg}
-foreground = ${color.fg}
-radius-top = 0.0
-radius-bottom = 0.0
-overline-size = 2
-overline-color = ${color.ac}
-border-size = 4
-border-color = ${color.bg}
-padding = 1
+background = #212121
+;${color.bg}
+foreground = ${color.white}
+;radius-top = 16.0
+;radius-bottom = 16.0
+radius = 0
+;overline-size = 2
+;overline-color = ${color.ac}
+border-size = 0
+border-color = ${color.blue}
+padding = 0 
 module-margin-left = 0
 module-margin-right = 0
-font-0 = "Iosevka:size=10;2"
+font-0 = "Iosevka:size=12;2"
 font-1 = "Material:size=12;2"
-font-2 = "xos4 Terminus:size=12;2"
+font-2 = "Material:size=20;2"
 
-modules-left = i3 separator separator title
-modules-center = date 
-modules-right = meteo_i meteo separator mpd_i mpd mpd-vol separator volume_i pulseaudio volume separator filesystem_bar_i filesystem_bar separator memory_i memory separator cpu_i cpu separator temperature_i temperature separator powermenu_i powermenu
+modules-left = title
+modules-right = m_update m_disk m_tmp m_mem m_cpu m_sep m_spot m_volspot m_sep m_vol m_sep m_powermenu
+modules-center = m_date
 
-separator =
-spacing = 0
-dim-value = 1.0
-wm-name = 
-locale = 
 tray-position = left
 tray-detached = false
 tray-maxsize = 16
 tray-transparent = false
-tray-background = ${color.bg}
 tray-offset-x = 0
 tray-offset-y = 0
-tray-padding = 0
+tray-padding = 5
 tray-scale = 1.0
-enable-ipc = true
-
-click-left = 
-click-middle = 
-click-right =
-scroll-up =
-scroll-down =
-double-click-left =
-double-click-middle =
-double-click-right =
-
-cursor-click = 
-cursor-scroll = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -102,15 +88,11 @@ compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
-format-foreground = 
-format-background = 
-format-underline =
-format-overline =
 format-spacing =
 format-padding =
 format-margin =
 format-offset =
-pseudo-transparency = false
+pseudo-transparency = true 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
