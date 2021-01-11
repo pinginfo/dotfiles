@@ -4,50 +4,77 @@ window:
     y: 15
     #dynamic_padding: true
 
-# Colors (Dracula)
 colors:
-  # Default colors
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
+    background: '#303030' #'#282c34' #'#fafafa' #'#282c34'
+    foreground: '#dcdfe4'
   normal:
-    black:   '#000000'
-    red:     '#ff5555'
-    green:   '#50fa7b'
-    yellow:  '#f1fa8c'
-    blue:    '#caa9fa'
-    magenta: '#ff79c6'
-    cyan:    '#8be9fd'
-    white:   '#bfbfbf'
-
-  # Bright colors
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#e5c07b'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#dcdfe4'
   bright:
-    black:   '#575b70'
-    red:     '#ff6e67'
-    green:   '#5af78e'
-    yellow:  '#f4f99d'
-    blue:    '#caa9fa'
-    magenta: '#ff92d0'
-    cyan:    '#9aedfe'
-    white:   '#e6e6e6'
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#e5c07b'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#dcdfe4'
+
+  # Colors (Dracula)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '#212121' #'#282a36'
+#    foreground: '#f8f8f2'
+#
+#  # Normal colors
+#  normal:
+#    black:   '#000000'
+#    red:     '#ff5555'
+#    green:   '#50fa7b'
+#    yellow:  '#f1fa8c'
+#    blue:    '#caa9fa'
+#    magenta: '#ff79c6'
+#    cyan:    '#8be9fd'
+#    white:   '#bfbfbf'
+#
+#  # Bright colors
+#  bright:
+#    black:   '#575b70'
+#    red:     '#ff6e67'
+#    green:   '#5af78e'
+#    yellow:  '#f4f99d'
+#    blue:    '#caa9fa'
+#    magenta: '#ff92d0'
+#    cyan:    '#9aedfe'
+#    white:   '#e6e6e6'
 
 font:
   normal:
-    family: monospace
+    family: DroidSansMono Nerd Font
     style: Regular
 
   bold:
-    family: monospace
+    family: DroidSansMono Nerd Font
     style: Bold
 
   italic:
-    family: monospace
+    family: DroidSansMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: monospace
+    family: DroidSansMono Nerd Font
     style: Bold Italic
 
-    size: 12
+    size: 8 
+key_bindings:
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: Comma, mods: Command, action: IncreaseFontSize }
+#  - { key: ColColonolonn, mods: Command, action: ResetFontSize }

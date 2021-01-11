@@ -2,17 +2,15 @@
 set $mod Mod4
 font pango:monospace 8
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock -- i3lock -i /usr/share/backgrounds/1920x1080-dark-linux.png
 exec --no-startup-id nm-applet
-exec mopidy --config /home/ping/.config/mopidy/mopidy.conf
 exec polybar main
 
 exec xmodmap -e 'keycode 65 = space space space space'
 exec xmodmap -e 'keycode 49 = less greater less greater lessthanequal greaterthanequal lessthanequal'
 
 default_border none
-workspace 1 output DP-2
-workspace 2 output DP-0
 
 ## I3 GESTION ##y
 bindsym $mod+Shift+c reload
@@ -26,7 +24,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 ## APP MANAGEMENT ##
 bindsym $mod+Return exec alacritty
-bindsym $mod+Ctrl+q exec i3lock -i /usr/share/backgrounds/gruvbox-dark-archlinux-scalable.png 
+bindsym $mod+Ctrl+q exec i3lock -i /usr/share/backgrounds/1920x1080-dark-linux.png 
 bindsym $mod+Shift+q kill
 
 ## MY SHORTCUT ##
@@ -100,12 +98,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-gaps inner 50
+gaps inner 25 
 smart_gaps on
-
-assign [class="discord"] 3
-assign [class="Thunderbird"] 3
-assign [class="Brave"] 2
 
 bindsym $mod+h split horizontal
 bindsym $mod+v split vertical
@@ -116,3 +110,6 @@ workspace 3:3 output DP_0
 
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
+
+bindsym $mod+Ctrl+l exec light -As sysfs/backlight/intel_backlight 5
+bindsym $mod+Ctrl+k exec light -Us sysfs/backlight/intel_backlight 5

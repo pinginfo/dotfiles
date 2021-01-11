@@ -35,34 +35,31 @@ include-file = ~/.config/polybar/my_modules.ini
 
 [bar/main]
 monitor = DP-2
-monitor-fallback =
+monitor-fallback = eDP-1
 monitor-strict = false
 override-redirect = false
 bottom = false
 fixed-center = true
 width = 100%
-height = 35
+height = 30
 offset-x = 0
 offset-y = 0
-background = #212121
-;${color.bg}
+background = #303030
+;#212121
 foreground = ${color.white}
-;radius-top = 16.0
-;radius-bottom = 16.0
 radius = 0
-;overline-size = 2
-;overline-color = ${color.ac}
 border-size = 0
 border-color = ${color.blue}
-padding = 0 
+padding = 2
+module-padding = 0 
 module-margin-left = 0
 module-margin-right = 0
-font-0 = "Iosevka:size=12;2"
-font-1 = "Material:size=12;2"
-font-2 = "Material:size=20;2"
+font-0 = "monospace:size=10;2"
+font-1 = "Material:size=10;2"
+font-2 = "Iosevka:size=22;5"
 
 modules-left = title
-modules-right = m_update m_disk m_tmp m_mem m_cpu m_sep m_spot m_volspot m_sep m_vol m_sep m_powermenu
+modules-right = m_update m_disk m_tmp m_mem m_cpu m_sep m_volspot m_spot m_sep m_vol m_sep m_bluetooth wireless-network wired-network m_sep m_lum battery m_sep m_power
 modules-center = m_date
 
 tray-position = left
