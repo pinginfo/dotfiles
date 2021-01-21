@@ -62,3 +62,6 @@ set t_Co=256
 let g:airline_theme='onehalfdark'
 " lightline
 let g:lightline = { 'colorscheme': 'onehalfdark' }
+
+" Transparent background
+hi Normal ctermbg=NONE

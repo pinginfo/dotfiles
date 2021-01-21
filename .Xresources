@@ -1,0 +1,45 @@
+Xft.dpi:                        109
+URxvt*termName:                 rxvt-256color
+URxvt*font:                     xft:DroidSansMono\ Nerd\ Font:pixelsize=18
+URxvt.depth:                    0
+URxvt*lineSpace:                0
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+URxvt.internalBorder:           35
+URxvt.perl-ext-common:          default,clipboard
+URxvt.keysym.Control-Shift-C:	  perl:clipboard:copy
+URxvt.keysym.Control-Shift-V:	  perl:clipboard:paste
+URxvt.clipboard.autocopy:       true
+URxvt.transparent:              true
+URxvt.shading:                  65
+
+URxvt*background: #282a36
+URxvt*foreground: #f8f8f2
+
+!Black
+URxvt*color0: #000000
+URxvt*color8: #575b70
+!Red
+URxvt*color1: #ff5555
+URxvt*color9: #ff6e67
+!Green
+URxvt*color2: #50fa7b
+URxvt*color10: #5af78e
+!Yellow
+URxvt*color3: #f1fa8c
+URxvt*color11: #faf99d
+!Blue
+URxvt*color4: #caa9fa
+URxvt*color12: #caa9fa
+!Magenta
+URxvt*color5: #ff79c6
+URxvt*color13: #ff92d0
+!Cyan
+URxvt*color6: #8be9fd
+URxvt*color14: #9aedfe
+!White
+URxvt*color7: #ffffff
+URxvt*color15: #e6e6e6
